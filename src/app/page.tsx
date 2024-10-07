@@ -11,6 +11,8 @@ import { aapl } from "@/data/data";
 import CustomChart from "@/components/chart/custom-line";
 import BollingerBandsChart from "@/components/chart/test2";
 import React from "react";
+import { Editor } from "@/components/editor";
+import EditorComponent from "@/components/my_editor";
 
 interface StockData {
   date: string;
@@ -53,9 +55,10 @@ export default async function Home() {
 
   return (
     <>
-      <BollingerBandsChart daily={aaplData} weekly={weeklyData} />
+      {/*   <BollingerBandsChart daily={aaplData} weekly={weeklyData} />
       <CustomChart aaplDataWithBands={aaplDataWithBands} />
-      <CustomChart aaplDataWithBands={weeklyDataWithBands} />
+      <CustomChart aaplDataWithBands={weeklyDataWithBands} /> */}
+      <EditorComponent />
     </>
   );
 }
